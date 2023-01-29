@@ -16,4 +16,5 @@ use App\Http\Controllers\UserController;
 
 Route::get('/', [UserController::class, 'index'])->name('users.index'); //view
 Route::post('import', [UserController::class, 'import'])->name('users.import'); //import route
-Route::get('export', [UserController::class, 'export'])->name('users.export');
+Route::get('export-csv', [UserController::class, 'exportCsv'])->name('users.export-csv');
+Route::get('export-pdf', [UserController::class, 'exportPdf'])->name('users.export-pdf');

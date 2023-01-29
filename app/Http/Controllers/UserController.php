@@ -25,9 +25,14 @@ class UserController extends Controller
         return back();
     }
 
-    public function export()
+    public function exportCsv()
     {
         // use Excel facade to export data, by passing in the UserExport class and the desired file name as arguments
         return Excel::download(new UserExport, 'users.xlsx');
+    }
+    public function exportPdf()
+    {
+        // use Excel facade to export data, by passing in the UserExport class and the desired file name as arguments
+        return Excel::download(new UserExport, 'users.pdf');
     }
 }

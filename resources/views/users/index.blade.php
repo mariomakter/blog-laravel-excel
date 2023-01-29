@@ -24,7 +24,8 @@
             </div>
             <button class="btn btn-primary">Import data</button>
             {{-- create a button for export feature --}}
-            <a class="btn btn-success" href="{{ route('users.export') }}">Export data</a>
+            <a class="btn btn-success" href="{{ route('users.export-csv') }}">Export Xlsx/csv</a>
+            <a class="btn btn-success" href="{{ route('users.export-pdf') }}">Export PDF</a>
         </form>
         {{-- display users data --}}
         <table class="table">
